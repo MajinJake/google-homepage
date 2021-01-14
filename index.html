@@ -9,53 +9,91 @@
 <body>
 
 <style>
-a.nav-link:link
-{
-   color: #000000;
-   text-decoration: none;
-}
-a.nav-link:visited
-{
-   color: #0400ff;
-   text-decoration: none;
-}
-a.nav-link:hover
-{
-   color: #000000;
-   text-decoration: none;
-}
-a.nav-link:active
-{
-   color: #000000;
-   text-decoration: none;
-}
-#wrapper {
-    display:flex;
-}
-#htpl1{
-    flex:1;
-    padding: 20px 20px 20px 20px;
-}
-#htpl2{
-    flex:1;
-    padding: 20px 20px 20px 20px;
 
+a.nav-bar:link, a.nav-bar:visited, a.nav-bar:hover, a.nav-bar:active {
+    color:black;
+    text-decoration: none;
+    
+}
+.container {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 15px 25px 25px 25px;
+}
+
+img{
+    display:block;
+    margin-top:150px;
+    margin-left:auto;
+    height: auto;
+    margin-right: auto;
+}
+
+.item2{
+    justify-self: end;
+}
+
+.wrapper{
+    position:relative;
+    display:flex;
+    margin-top:25px;
+}
+
+.search {
+    border: 1px solid rgba(128, 128, 128, 0.288);
+    border-radius: 25px;
+    height: 35px;
+    width: 55%;
+    padding: 2px 23px 2px 25px;
+    outline: 0;
+    background-color: #ffffff;
+    justify-self: auto;
+    position:absolute;
+    left:20%;
+    top:25%;
+
+  }
+
+.search-icon{
+    position:absolute;
+    top:-136px;
+    left:21%;
+    width:14px;
+    z-index: 1;
+}
+.buttons{
+    position:relative;
+    display:block;
+    margin-top:60px
 }
 
 </style>
 
-<div id="wrapper">
-    <div id="hptl1">
-        <a class="nav-link" href="#about">About</a>
-        <a class="nav-link" href="#store">Store</a>
+<div class="container">
+    <div class="item1">
+        <p class="sub-item">
+            <a class="nav-bar" href="About.asp">About</a>
+            <a class="nav-bar" href="Store.asp">Store</a>
+        </p>
     </div>
-
-    <div id="hptl2">
-        <a class="nav-link" href="Gmail">Gmail</a>
-        <a class="nav-link" href="Images">Images</a>
+    <div class="item2">
+        <p class="sub-item">
+            <a class="nav-bar" href="Gmail.asp">Gmail</a>
+            <a class="nav-bar" href="Images.asp">Images</a>
+        </p>
     </div>
 </div>
-<img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
+
+<img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" id="logo">
+
+<div class="wrapper">
+    <img class="search-icon" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDU2Ljk2NiA1Ni45NjYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDU2Ljk2NiA1Ni45NjY7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KPHBhdGggZD0iTTU1LjE0Niw1MS44ODdMNDEuNTg4LDM3Ljc4NmMzLjQ4Ni00LjE0NCw1LjM5Ni05LjM1OCw1LjM5Ni0xNC43ODZjMC0xMi42ODItMTAuMzE4LTIzLTIzLTIzcy0yMywxMC4zMTgtMjMsMjMgIHMxMC4zMTgsMjMsMjMsMjNjNC43NjEsMCw5LjI5OC0xLjQzNiwxMy4xNzctNC4xNjJsMTMuNjYxLDE0LjIwOGMwLjU3MSwwLjU5MywxLjMzOSwwLjkyLDIuMTYyLDAuOTIgIGMwLjc3OSwwLDEuNTE4LTAuMjk3LDIuMDc5LTAuODM3QzU2LjI1NSw1NC45ODIsNTYuMjkzLDUzLjA4LDU1LjE0Niw1MS44ODd6IE0yMy45ODQsNmM5LjM3NCwwLDE3LDcuNjI2LDE3LDE3cy03LjYyNiwxNy0xNywxNyAgcy0xNy03LjYyNi0xNy0xN1MxNC42MSw2LDIzLjk4NCw2eiIgZmlsbD0iIzAwMDAwMCIvPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K" />
+    <input class="search" placeholder="" type="text" >
+</div>  
+
+<div class="buttons">
+    <button type="button">Google</button>
+</div>
 
 
 </body>
