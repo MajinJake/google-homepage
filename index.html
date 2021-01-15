@@ -37,6 +37,7 @@ img{
     position:relative;
     display:flex;
     margin-top:25px;
+    justify-content: center;
 }
 
 .search {
@@ -44,14 +45,9 @@ img{
     border-radius: 25px;
     height: 35px;
     width: 55%;
-    padding: 2px 23px 2px 25px;
+    padding: 2px 23px 2px 28px;
     outline: 0;
     background-color: #ffffff;
-    justify-self: auto;
-    position:absolute;
-    left:20%;
-    top:25%;
-
   }
 
 .search-icon{
@@ -61,12 +57,26 @@ img{
     width:14px;
     z-index: 1;
 }
-.buttons{
+
+.button-container{
+    display: flex;
     position:relative;
-    display:block;
-    margin-top:60px
+    margin-top: 30px;
+    justify-content: center;
 }
 
+.button{
+    position: relative;
+    color: rgb(0, 0, 0);
+    background-color: rgba(28, 129, 133, 0.048);
+    border: none;
+    padding: 10px 22px;
+}
+#Franch{
+    margin-top: 35px;
+    font-size: 12px;
+    text-align: center;
+}
 </style>
 
 <div class="container">
@@ -91,10 +101,14 @@ img{
     <input class="search" placeholder="" type="text" >
 </div>  
 
-<div class="buttons">
-    <button type="button">Google</button>
+<div class="button-container">
+    <div class="buttons">
+        <button type="button" class="button">Google Search</button>
+        <button type="button>" class="button">I'm Feeling Lucky</button>
+    </div>
 </div>
 
+<p id="Franch">Google offered in: <a href="google.com">Français</a></p>
 
 </body>
 </html>
